@@ -1,0 +1,18 @@
+.inputData{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+}
+.inputData span{
+    color: red;
+}
+.signupSection{
+    color: black;
+    margin-top: 20px;
+}
+.linkStyle{
+    color: tomato;
+    text-decoration: none;
+    margin-left: 10px;
+}

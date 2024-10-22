@@ -1,0 +1,27 @@
+#whiteAddIcon {
+    width: 40px;
+    position: relative;
+    bottom: 65px;
+    left: 180px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    bottom: 55px;
+    left: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.icons img {
+    width: 40px;
+}
+
+.addIcon p {
+    color: white;
+}

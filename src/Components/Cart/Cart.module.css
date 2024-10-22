@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.itemTitles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 170px;
+     
+}
+.cartItems{
+    margin-top: 100px;
+}
+hr{
+     margin-top: 15px;
+     color: rgb(252, 251, 251);
+     
+}
+.container{
+    font-family: "Roboto";
+}
+.itemTitles p{
+    color: rgb(96, 95, 95);
+    font-size: 14px;
+}
+.cartItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 177px;
+    margin: auto;
+}
+.cartItem img{
+    width:40px;
+}
+#crossIcon{
+    width: 10px;
+    cursor: pointer;   
+}
+.cartPriceTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 350px;
+    color: rgb(96, 95, 95);
+    margin-top: 25px;
+}
+.cartTotals{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* margin-top: 60px; */
+}
+.cartTotals hr{
+    width:438px;
+    margin-top: 10px
+}
+.cartPriceTotal{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 328px;
+    margin-top: -20px;
+    color: rgb(96, 95, 95);
+}
+.Total{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 373px;
+    margin-top: -20px;
+}
+.cartTotals button{
+    background-color: tomato;
+    border: 1px solid tomato;
+    color: white;
+    font-family: "Roboto";
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.bottomSection{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.promocode{
+    display: flex;
+      flex-direction: column;
+    justify-content: start;
+    align-items: start;   
+}
+.inputbox{
+    display: flex;
+    margin-top: 10px;
+     
+}
+.inputbox input{
+    width: 25vw;
+    padding: 8px 20px;
+     
+    border-radius: 8px;
+    border-color: rgb(222, 222, 222);
+    box-shadow: 0px 0px 2px 1px white;
+    border: 1px solid rgb(222, 222, 222);;
+    outline: none;
+     
+}
+.inputbox button{
+    width: 10vw;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px ;
+    color: white;
+    font-family: "Roboto";
+}

@@ -1,0 +1,107 @@
+.explporeManuhead{
+    display: flex;
+    flex-direction: column;
+     gap: 20px;
+}
+.explporeManuhead p{
+    width: 55vw;
+    color: rgb(38, 32, 32);
+}
+.container{
+    font-family: "Roboto";
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.dishcat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+.dishcat img{
+    width: 7vw;
+}
+.dishcat p{
+    color: rgb(38, 32, 32);;
+}
+hr{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: rgb(71, 61, 61);
+}
+.dishesItem{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.foodList img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.foodName img{
+    width: 35%;
+}
+#whiteAddIcon{
+       width: 50px;
+        position: relative;
+        bottom: 65px;
+        left: 180px;
+        cursor: pointer;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+        bottom: 55px;
+        left: 60px;
+        color: white;
+        cursor: pointer;
+}
+.icons img{
+    width: 40px;
+}
+.addIcon p{
+    color: white;
+}
+.foodName h2{
+    font-size: 20px;
+}
+.foodName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+}
+.foodList p{
+    font-size: 12px;
+    color: rgb(38, 32, 32);
+    padding-inline: 20px;
+}
+.foodList{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid white;
+     border-radius: 20px;
+    box-shadow: 0.4px 0.4px 0.4px 0.4px rgb(214, 205, 205);
+}
+.foodList h1{
+    color: tomato;
+    font-size: 25px;
+    padding-inline: 20px;
+}
+.circle{
+    border: 5px solid tomato;
+    border-radius: 50px;
+}

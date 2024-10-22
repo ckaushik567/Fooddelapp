@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container{
+    font-family: "Roboto";
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato
+}
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    width: 40vw;
+    height: 80vh;
+    color: white;
+    border-radius: 10px;
+}
+.loginContainer button{
+    width: 10vw;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid white;
+    font-family: "Roboto";
+    font-weight: 600;
+    background-color: tomato;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+.loginContainer input{
+    width: 25vw;
+    padding:10px 20px;
+    border: 1px solid rgb(104, 98, 98);
+    border-radius: 8px;
+    background-color: rgb(255, 242, 242);
+    outline: none;
+}
+.loginHeading h1{
+    color: tomato;
+    font-size: 45px;
+}
+.inputData{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     
+    height: 65vh;
+}
+.inputData span{
+    color: red;
+}
+.signupSection{
+    color: black;
+    margin-bottom: 10px;
+}
+.linkStyle{
+    color: tomato;
+    text-decoration: none;
+    margin-left: 10px;
+}
