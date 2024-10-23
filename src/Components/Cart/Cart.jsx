@@ -18,7 +18,9 @@ function Cart() {
     setCartCount(prev=>prev-1)
     }
 
-     
+    let sumValues = (objects) => {
+        return objects.reduce((sum, obj) => sum + obj.price, 0);
+      };
 
     return (
         <div className="container">
@@ -70,7 +72,12 @@ function Cart() {
                         <h2>Cart Totals</h2>
                         <div className={cartcss.cartPriceTitle}>
                             <p>Subtotal</p>
-                            <p>&#8377;60</p>
+                            {food_list.map((item)=>{
+                                if(cartItem[item._id]>0){
+                                    let total =sumValues([item]);
+                                    console.log(total)
+                                } 
+                            })}
                         </div>
                         <hr />
                         <div className={cartcss.cartPriceTotal}>
