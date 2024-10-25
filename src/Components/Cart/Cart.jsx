@@ -40,10 +40,6 @@ function Cart() {
 
                         food_list.map((item) => {
                             if (cartItem[item._id] > 0) {
-
-                                array.push(item.price * cartItem[item._id]);
-
-                                console.log(array)
                                 return <> <div className={cartcss.cartItem}>
                                     <img src={item.image} />
                                     <p>{item.name}</p>
@@ -75,7 +71,7 @@ function Cart() {
                         <hr />
                         <div className={cartcss.Total}>
                             <h4>Total</h4>
-                            <p>&#8377;{getTotalAmount()+5}</p>
+                            <p>&#8377;{getTotalAmount()!=0?getTotalAmount()+5:0}</p>
                         </div>
                         <button onClick={()=>navigate('/placeOrder')}>PROCEED TO CHECKOUT</button>
                     </div>

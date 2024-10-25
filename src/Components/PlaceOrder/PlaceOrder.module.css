@@ -2,14 +2,14 @@
 .container{
     width: 80vw;
     margin: auto;
-    font-family: "Roboto";
+    font-family: "Roboto" sans-serif;
 }
 .email input{
     width: 100%;
 }
 .placeOrder{
     width: 35vw;
-    margin-top: 20px;
+     
 }
 .name{
     display: flex;
@@ -27,3 +27,13 @@ input{
     border: 2px solid rgb(134, 134, 134);
     border-radius: 5px;
 }
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+     
+}
+.placeOrder h1{
+    margin-bottom: 50px;
+}
+ 

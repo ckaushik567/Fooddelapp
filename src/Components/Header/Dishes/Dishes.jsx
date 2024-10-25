@@ -10,17 +10,19 @@ function Dishes() {
     const [filterStyle, setFilterStyle] = useState('');
     const {cartCount} = useContext(StoreContext);
 
-    function handleOnFilter(cat) {
-        let foodItems = [];
-        setFilterStyle(cat);
+    console.log(foodList)
 
-        food_list.filter((item) => {
-            if (cat == item.category) {
-                foodItems.push(item);
-            }
-        })
-        setFoodList(foodItems);
-    }
+    // function handleOnFilter(cat) {
+    //     let foodItems = [];
+    //     setFilterStyle(cat);
+
+    //     food_list.filter((item) => {
+    //         if (cat == item.category) {
+    //             foodItems.push(item);
+    //         }
+    //     })
+    //     setFoodList(foodItems);
+    // }
     return (
         <div className={Dishescss.container}>
             <div className={Dishescss.explporeManuhead}>
@@ -29,9 +31,9 @@ function Dishes() {
             </div>
             <div className={Dishescss.category}>
                 {menu_list.map((cat, index) => {
-                    return <div key={index} onClick={() => handleOnFilter(cat.menu_name)}
+                    return <div key={index} onClick={()=>setFoodList(prev=>prev==cat.menu_name?'All':food_list)}
                         className={Dishescss.dishcat}>
-                        <img className={filterStyle == cat.menu_name ? Dishescss.circle : ""} src={cat.menu_image} />
+                        <img className={filterStyle == cat.menu_name ? Dishescss.circle: ""} src={cat.menu_image} />
                         <p>{cat.menu_name}</p>
                     </div>
                 })}

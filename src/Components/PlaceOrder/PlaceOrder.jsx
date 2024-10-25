@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import placeordercss from './PlaceOrder.module.css';
 import Navbar from '../Navbar/Navbar';
+import cartcss from '../Cart/Cart.module.css'
+import { StoreContext } from '../Context/StoreContext';
+import Footer from '../Footer/Footer';
 
 function PlaceOrder() {
+    const { getTotalAmount } = useContext(StoreContext)
     return (
+        <>
         <div className={placeordercss.container}>
             <Navbar />
             <div className={placeordercss.mainContainer}>
@@ -14,7 +19,7 @@ function PlaceOrder() {
                         <input type="text" placeholder='SecondName...' />
                     </div>
                     <div className={placeordercss.email}>
-                        <input type="text" placeholder='Email...'/>
+                        <input type="text" placeholder='Email...' />
                     </div>
                     <div className={placeordercss.email}>
                         <input type="text" placeholder='Street' />
@@ -31,8 +36,31 @@ function PlaceOrder() {
                         <input type="text" placeholder='Phone' />
                     </div>
                 </div>
+                <div className={placeordercss.totalAmount}>
+                    <div className={cartcss.cartTotals}>
+                        <h2>Cart Totals</h2>
+                        <div className={cartcss.cartPriceTitle}>
+                            <p>Subtotal</p>
+
+                            <p>&#8377;{getTotalAmount()}</p>
+                        </div>
+                        <hr />
+                        <div className={cartcss.cartPriceTotal}>
+                            <p>Delvery Fee</p>
+                            <p>&#8377;5</p>
+                        </div>
+                        <hr />
+                        <div className={cartcss.Total}>
+                            <h4>Total</h4>
+                            <p>&#8377;{getTotalAmount() + 5}</p>
+                        </div>
+                        <button >PROCEED TO PAYMENT</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <Footer/>
+    </>
     )
 }
 
