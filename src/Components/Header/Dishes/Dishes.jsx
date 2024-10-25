@@ -6,23 +6,9 @@ import { StoreContext } from '../../Context/StoreContext';
 
 function Dishes() {
 
-    const [foodList, setFoodList] = useState(food_list);
-    const [filterStyle, setFilterStyle] = useState('');
-    const {cartCount} = useContext(StoreContext);
+    const [foodList, setFoodList] = useState('All');
+    const { cartCount } = useContext(StoreContext);
 
-    console.log(foodList)
-
-    // function handleOnFilter(cat) {
-    //     let foodItems = [];
-    //     setFilterStyle(cat);
-
-    //     food_list.filter((item) => {
-    //         if (cat == item.category) {
-    //             foodItems.push(item);
-    //         }
-    //     })
-    //     setFoodList(foodItems);
-    // }
     return (
         <div className={Dishescss.container}>
             <div className={Dishescss.explporeManuhead}>
@@ -31,9 +17,9 @@ function Dishes() {
             </div>
             <div className={Dishescss.category}>
                 {menu_list.map((cat, index) => {
-                    return <div key={index} onClick={()=>setFoodList(prev=>prev==cat.menu_name?'All':food_list)}
+                    return <div key={index} onClick={() => setFoodList(prev => prev == cat.menu_name ? 'All' : cat.menu_name)}
                         className={Dishescss.dishcat}>
-                        <img className={filterStyle == cat.menu_name ? Dishescss.circle: ""} src={cat.menu_image} />
+                        <img className={foodList == cat.menu_name ? Dishescss.circle : ""} src={cat.menu_image} />
                         <p>{cat.menu_name}</p>
                     </div>
                 })}
@@ -41,23 +27,43 @@ function Dishes() {
             <hr />
             <h1>Top dishes near you</h1>
             <div className={Dishescss.dishesItem}>
-                {foodList.map((foodItem, index) => {
-                    return <div key={index} className={Dishescss.foodList}>
-                        <img src={foodItem.image} />
-                        <div className={Dishescss.addIcon}>
-                             <AddIcon key={index}
-                                      foodImage={foodItem.image}
-                                      foodName={foodItem.name}
-                                      foodPrice={foodItem.price}
-                                      foodId={foodItem._id}/>        
+                {food_list.map((foodItem, index) => {
+                    if (foodItem.category == foodList) {
+                        return <div key={index} className={Dishescss.foodList}>
+                            <img src={foodItem.image} />
+                            <div className={Dishescss.addIcon}>
+                                <AddIcon key={index}
+                                    foodImage={foodItem.image}
+                                    foodName={foodItem.name}
+                                    foodPrice={foodItem.price}
+                                    foodId={foodItem._id} />
+                            </div>
+                            <div className={Dishescss.foodName}>
+                                <h2>{foodItem.name}</h2>
+                                <img src={assets.rating_starts} />
+                            </div>
+                            <p>{foodItem.description}</p>
+                            <h1>&#8377;{foodItem.price}</h1>
                         </div>
-                        <div className={Dishescss.foodName}>
-                            <h2>{foodItem.name}</h2>
-                            <img src={assets.rating_starts} />
+                    }
+                    else if (foodList == 'All') {
+                        return <div key={index} className={Dishescss.foodList}>
+                            <img src={foodItem.image} />
+                            <div className={Dishescss.addIcon}>
+                                <AddIcon key={index}
+                                    foodImage={foodItem.image}
+                                    foodName={foodItem.name}
+                                    foodPrice={foodItem.price}
+                                    foodId={foodItem._id} />
+                            </div>
+                            <div className={Dishescss.foodName}>
+                                <h2>{foodItem.name}</h2>
+                                <img src={assets.rating_starts} />
+                            </div>
+                            <p>{foodItem.description}</p>
+                            <h1>&#8377;{foodItem.price}</h1>
                         </div>
-                        <p>{foodItem.description}</p>
-                        <h1>&#8377;{foodItem.price}</h1>
-                    </div>
+                    }
                 })}
             </div>
         </div>
