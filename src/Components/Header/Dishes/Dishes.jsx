@@ -10,7 +10,7 @@ function Dishes() {
     const { cartCount } = useContext(StoreContext);
 
     return (
-        <div className={Dishescss.container}>
+        <div id='dishes' className={Dishescss.container}>
             <div className={Dishescss.explporeManuhead}>
                 <h1>Explore our manu</h1>
                 <p>choose from a diverse manu featuring delectable array of dishes.Our mission is to satisfy carvings and elevate your dining experince,One delicius meal at a time.</p>

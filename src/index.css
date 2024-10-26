@@ -10,3 +10,9 @@
 li{
   list-style-type: none;
 }
+Link{
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}

@@ -1,21 +1,33 @@
-#whiteAddIcon {
+.whiteAddIcon{
     width: 40px;
-    position: relative;
+    position: absolute;
     bottom: 65px;
-    left: 180px;
+    left: 200px;
     cursor: pointer;
+    top:-10vh;
+     
+}
+.iconsContainer{
+    position: relative;
+}
+.whiteAddIcon img{
+    color: white;
+    border-radius: 70px;
+     
 }
 
 .icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    position: relative;
+    gap: 10px;
+    position: absolute;
     bottom: 55px;
-    left: 60px;
+    left: 130px;
     color: white;
     cursor: pointer;
+    top: -43px;
+     
 }
 
 .icons img {

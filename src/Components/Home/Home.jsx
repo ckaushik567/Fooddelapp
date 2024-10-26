@@ -12,7 +12,7 @@ function Home({cartItem,setCartItems}) {
     <div className='container'>
         <Navbar cartCount={cartCount}/>
         <Header/>
-        <Dishes setCartCount={setCartCount}/>
+        <Dishes id="dishes" setCartCount={setCartCount}/>
      </div>
      <Footer/>
       

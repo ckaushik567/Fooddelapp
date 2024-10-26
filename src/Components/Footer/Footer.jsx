@@ -6,7 +6,7 @@ import linkedin from '../../assets/linkedin_icon.png';
 
 function Footer() {
     return (
-        <div className={footercss.container1}>
+        <div id='footer' className={footercss.container1}>
             <div className={footercss.container}>
                 <div className={footercss.container2}>
                 <div className={footercss.logo}>

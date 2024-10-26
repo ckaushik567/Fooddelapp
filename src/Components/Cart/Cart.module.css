@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .itemTitles{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 170px;
+    gap: 170px; */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    align-content: space-between;
+    gap: 100px;
      
 }
 .cartItems{
     margin-top: 100px;
 }
 hr{
-     margin-top: 15px;
+     margin-top: 5px;
      color: rgb(252, 251, 251);
      
 }
@@ -22,11 +26,15 @@ hr{
     font-size: 14px;
 }
 .cartItem{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     gap: 177px;
-    margin: auto;
+    margin: auto; */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 100px;
+    align-content: space-between;
 }
 .cartItem img{
     width:40px;

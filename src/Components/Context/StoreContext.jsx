@@ -7,6 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
     const [cartItem, setCartItems] = useState({});
     const [cartCount, setCartCount] = useState(0);
+    const [underline, setUnderline] = useState('');
 
 const addToCart = (itemId) => {
     if(!cartItem[itemId]) {
@@ -19,7 +20,9 @@ const addToCart = (itemId) => {
 
 const removeFromCart = (itemId) =>{
     setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
-    setCartCount(prev=>prev-1)
+    if(cartItem[itemId]==1){
+        setCartCount(prev=>prev-1)
+    }
 }
 
 const getTotalAmount = () =>{
@@ -39,7 +42,9 @@ const getTotalAmount = () =>{
         setCartCount,
         addToCart,
         removeFromCart,
-        getTotalAmount
+        getTotalAmount,
+        underline,
+        setUnderline
     }
     return (
         <StoreContext.Provider value={contextValue}>

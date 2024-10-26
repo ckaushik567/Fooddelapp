@@ -50,14 +50,14 @@ hr{
 .foodName img{
     width: 35%;
 }
-#whiteAddIcon{
+/* #whiteAddIcon{
        width: 50px;
         position: relative;
         bottom: 65px;
         left: 180px;
         cursor: pointer;
-}
-.icons{
+} */
+/* .icons{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@ hr{
         left: 60px;
         color: white;
         cursor: pointer;
-}
+} */
 .icons img{
     width: 40px;
 }
